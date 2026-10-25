@@ -38,6 +38,11 @@ h1{font-family:'Dancing Script',cursive;font-weight:700;font-size:clamp(3.2rem,1
 .venue{font-family:'Dancing Script',cursive;font-weight:700;font-size:2.2rem;color:var(--rose);margin-top:26px;line-height:1.1}
 .btn{font:inherit;font-weight:600;font-size:1.1rem;background:var(--rose);color:#fff;border:0;border-radius:99px;padding:13px 40px;cursor:pointer;margin-top:22px;box-shadow:0 5px 0 #86243f;transition:transform .1s,box-shadow .1s;animation:beat 2.4s ease-in-out infinite}
 @keyframes beat{0%,70%,100%{transform:scale(1)}80%{transform:scale(1.06)}}
+a.btn{display:inline-block;text-decoration:none}
+.actions{display:flex;gap:14px;justify-content:center;align-items:center;flex-wrap:wrap;margin-top:22px}
+.actions .btn{margin-top:0;padding:13px 30px}
+.btn.alt{background:#fff8f1;color:var(--rose);border:2px solid var(--rose);box-shadow:0 5px 0 #e3b6c4;animation:none;padding:11px 28px}
+.btn.alt:active{box-shadow:0 1px 0 #e3b6c4}
 .btn:hover{animation-play-state:paused}
 .btn:active{transform:translateY(4px);box-shadow:0 1px 0 #86243f;animation:none}
 .btn:disabled{opacity:.6;cursor:wait}
@@ -84,13 +89,16 @@ body.rsvp-open #table{opacity:0;transform:translateY(60px)}
     <g fill="#C4892F"><circle class="sp" cx="100" cy="24" r="3"/><circle class="sp" cx="204" cy="20" r="3" style="animation-delay:-.7s"/><circle class="sp" cx="30" cy="48" r="2.5" style="animation-delay:-1.3s"/><circle class="sp" cx="272" cy="52" r="2.5" style="animation-delay:-1.8s"/><circle class="sp" cx="150" cy="4" r="2.5" style="animation-delay:-.3s"/></g>
   </svg>
 
-  <p class="time">from 9:00 pm onwards</p>
-  <p class="para">Join in for some fun times, drinks and food. Bring your poker faces for the card games.</p>
+  <p class="time">from 9:00 pm</p>
+  <p class="para">Join in for some fab drinks, scrumptious food and a lit night! 🔥<br>Showcase your poker faces for the card games ♠️</p>
   <p class="dress">Ethnic wear or no entry.</p>
 
   <p class="venue">A-204, Ambience Creacions</p>
 
-  <button class="btn" id="open" type="button" aria-expanded="false" aria-controls="rsvp">RSVP</button>
+  <div class="actions">
+    <button class="btn" id="open" type="button" aria-expanded="false" aria-controls="rsvp">RSVP</button>
+    <a class="btn alt" href="https://uap.mygate.com/grp-invite/6ade1cf470ddf144d0761b90" target="_blank" rel="noopener">Entry pass</a>
+  </div>
   <form id="rsvp" autocomplete="off">
     <label for="name">Your name</label>
     <input id="name" name="name" required maxlength="80" placeholder="Sharmaji ka beta">
@@ -161,4 +169,4 @@ form.addEventListener('submit', async e => {
 });
 </script>
 </body>
-</html>ß
+</html>
